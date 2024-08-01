@@ -1,4 +1,4 @@
-header {
+/* header {
 
   display: flex;
   justify-content: center;
@@ -9,8 +9,7 @@ header {
   flex-wrap: wrap;
   font-weight: 500;
   gap: 4rem;
-  /* padding-left: 20px; */
-  /* padding-right: 20px; */
+
 }
 header .icons {
   gap: 2rem;
@@ -29,7 +28,7 @@ header .icons button{
 header input {
   border-radius: 24px !important;
   height: 25px;
-  /* width: auto !important; */
+
 
 
 }
@@ -60,7 +59,7 @@ header .cont1 , header .cont2{
   border-radius: 50%;
   margin: auto;
   border: solid 1px #0000003e;
-}
+} */
 
 /* 
 @media (max-width : 1800px){
@@ -126,7 +125,7 @@ header .cont1 , header .cont2{
   
 } */
 
-@media (max-width: 768px){
+/* @media (max-width: 768px){
   header input{
     max-width: 33rem !important;
     height: 2.1rem;
@@ -152,13 +151,13 @@ header .cont1 , header .cont2{
     position: absolute;
     gap: 0px;
   }
-}
+} */
 /* ################ */
-
+/* 
 header nav.flex{
   background-color: rgb(253 230 230);
   width: 100%;
-  /* display: none; */
+
 
 }
 header nav ul.flex{
@@ -208,10 +207,400 @@ header nav .icon-menu{
   color: white;
 
 }
+ */
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* ####################ahmed */
+header .rigth{
+  width: 70px;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  right: 0;
+  z-index: 300;
+  border-left: 1px solid rgba(0, 0, 0, 0.127);
+  transition: 0.4s ease-in-out;
+  top: 0;
+ 
+  position: fixed;
+ }
+
+ header .rigth:hover{
+  width: 320px;
+ }
+ 
+header .rigth .cols{
+  padding: 20px 0;
+  overflow: hidden;
+}
+header .rigth .cols .col .text_img{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  width: 320px;
+  padding: 0 20px;
+    
+ }
+ 
+header .rigth .cols .col .text_img a{
+  text-decoration: none;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.551);
+  transition: 0.3s ease-in-out;
+  font-weight: 800;
+   
+ }
+header .rigth .cols .col .text_img a:hover{
+  color: #f33419;
+  }
+header .rigth .cols .col .act {
+  padding: 12px 14px;
+  border-radius: px;
+  background-color: #f33419;
+   position: relative;
+    
+   
+}
+header .rigth .cols .col .act a{
+  color: #fff;
+}
+header .rigth .cols .col .act a:hover{
+  color: rgba(0, 0, 0, 0.452);
+}
+header .rigth .cols .col .text_img img{
+  width: 25px;
+}
+
+header .rigth .cols .col .act i{
+  color: #fff;
+  font-size: 25px;
+  margin-right: 10px;
+   
+}
+header .rigth .cols .col{
+   margin-bottom: 30px;
+}
+
+
+
+
+ 
+/* ////////////////////// */
+header .navpar{
+    width: 100%;
+     left: 0;
+    margin-top: 20px;
+   
+ 
+  }
+header .navpar .icon_logo{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 120px;
+     background: #fff;
+ }
+ header .navpar .icon_logo .pars{
+  display: none;
+  }
+
+ header .navpar .icon_logo .logo img{
+   width: 180px;
+ 
+ }
+ header .navpar .icon_logo .search{
+    width: 53%;
+     position: absolute;
+     right: 350px;
+   }
+   header .navpar .icon_logo .search form i{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.682);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+   }
+   header .navpar .icon_logo .search form i:hover{
+    color: rgba(0, 0, 0, 0.447);
+   }
+ 
+ header .navpar .icon_logo .search form input{
+    padding: 15px;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+ }
+ header .navpar .icon_logo .icon{
+     margin: 0 40px;
+     display: flex;
+     width: 15%;
+   }
+ header .navpar .icon_logo .icon i{
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    margin: 0 15px;
+
+  }
+  header .navpar .icon_logo .icon .con{
+    position: relative;
+  }
+  header .navpar .icon_logo .icon .con p{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color:#f33419 ;
+    padding: 3px 6px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-size: 13px;
+    box-shadow: 1px 1px 5px black;
+     
+   }
+
+
+
+
+
+/* ////// */
+    header .navpar .nav{
+      display: flex;
+      background-color: #fde6e6;
+      width: 100%;
+       padding: 10px 0;
+       align-items: center;
+     }
+     header .navpar .nav .icon {
+      display: flex;
+       
+      align-items: center;
+      background-color: #fff;
+      border-radius: 30px;
+      margin-right: 120px;
+      padding: 4px;
+     }
+    header .navpar .nav .icon i{
+      font-size: 22px;
+       
+      border-radius: 50%;
+      padding: 9px 11px;
+      background-color: #f33419 ;
+      color: #fff;
+   
+    }
+    header .navpar .nav .icon a{
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 0 15px;
+    }
+    header .navpar .nav nav ul{
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      margin-right: 300px;
+    }
+
+    header .navpar .nav nav ul li a{
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      color: black;
+      padding: 10px 15px;
+      transition: 0.3s ease;
+    }
+
+    header .navpar .nav nav ul li a:hover{
+      background-color: aliceblue;
+      color: #f33419;
+      border-radius: 30px;
+    }
+
+ 
+
+    @media  (max-width:1250px){
+      header .navpar .nav{
+        margin-right: 25px;
+      
+      }
+      header .navpar .nav nav ul{
+ 
+        margin-right: 18px;
+      }
+      
+    }
+    @media  (max-width:1300px){
+      header .rigth{
+        position: absolute;
+        right: 0;
+      }
+
+    }
+  
+   
+    @media  (max-width:1100px) {
+      header .navpar .icon_logo .search form input{
+        width: 90%;
+     }
+     header .navpar .icon_logo .search form i{
+      left: 70px;
+     }
+
+    }
+
+
+
+    @media  (max-width:1100px){
+      header .navpar .nav .icon{
+         margin-right: 80px;
+      }
+    }
+
+
+
+
+    @media  (max-width:950px) {
+      header .navpar .icon_logo .search{
+          position: absolute;
+         top: 70px;
+         background-color: #fde6e6;
+         width: 100%;
+         padding: 10px;
+         right: 0px;
+        }
+  
+     header .navpar .icon_logo .logo img{
+      width: 100px;
+     }
+     header .navpar .icon_logo{
+       margin-right: 40px;
+     }
+ 
+
+     header .navpar .icon_logo .pars{
+      display: block;
+      z-index: 20000;
+      }
+
+      header .navpar .icon_logo .pars i{
+        font-size: 25px;
+      }
+      header .navpar .icon_logo .icon .con .fa-user,
+      header .navpar .icon_logo .icon .con .fa-heart,
+      header .navpar .icon_logo .icon .con .none{
+        display: none;
+      }
+
+
+      header .rigth{
+        display: none;
+      }
+      header .navpar{
+        width: 100%;
+      }
+      header .navpar .icon_logo .search form i{
+        position: absolute;
+        top: 25px;
+        left: 120px;
+       
+       }
+
+
+ 
+
+      #nume{
+        display: block;
+        font-size: 30px;
+        position: absolute;
+        transform: translateY(-50%);
+        right: 20px;
+        z-index: 10000;
+       
+      
+     }
+  
+   
+         header .nav{
+           position: absolute;
+           top: 0px;
+           left: 0;
+           right: 0;
+           height: 100vh;
+           background-color: #ad1c1cf9;
+           display: block;
+            text-align: center;
+            padding: 50px 0;
+            z-index: 10000;
+            align-items: center;
+            border-bottom: 1px solid rgb(136, 132, 132);
+            right: -120%;
+            transition: 0.3s ease-in-out;
+            width: 200px;
+            
+             }
+             header .nav.active{
+               right: 0;
+             }
+
+          
+       
+         
+           header .navpar .nav {
+            margin-right: 0px;
+        }
+        header .navpar .nav nav ul {
+         
+          display: block;
+        
+          
+         
+          height: 100vh;
+         
+        }
+        header .navpar .nav nav ul{
+          padding: 60px 0px;
+
+        }
+        header .navpar .nav nav ul li{
+          margin: 40px 0;
+          
+        }
+
+        header .navpar .nav nav ul li a{
+          font-weight: 800;
+          font-size: 30px;
+        }
+ 
+ 
+    }
+
+
+
+    @media  (max-width:450px){
+      header .navpar .icon_logo .search form i{
+        position: absolute;
+        top: 25px;
+        left: 70px;
+       
+       }
+    }
+    /* /////////////////HEADER END//////// //// */
 
 
 

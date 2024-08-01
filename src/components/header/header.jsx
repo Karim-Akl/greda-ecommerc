@@ -5,85 +5,125 @@ import Link from "next/dist/client/link";
 const Header = () => {
   return (
 
-    <header className="flex">
-
-      <div className="flex icons">
-
-        <button className="icon-cart cart">
-          <span className="cont1">0</span>
-        </button>
-
-
-        <button className="icon-heart-o">
-          <span className="cont2">0</span>
-        </button>
-
-        <button className="icon-profile"></button>
-
-      </div>
-
-      <div className="slogo flex">
-
-        <div
-          className="search"
-          style={{
-            position: "relative",
-            minWidth: "60rem",
-            margin: "0 auto",
-            direction: "rtl",
-          }}
-        >
-          <input
-            type="text"
-            placeholder={"Search for Products "}
-            style={{
-              width: "100%",
-              padding: "10px 40px 10px 10px",
-              border: "1px solid #ccc",
-              fontSize: "16px",
-              opacity:"0.9",
-              direction: "ltr",
-              
-            }}
-          />
-          <p
-            className="icon-search"
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "-25px",
-              transform: "translateY(-50%)",
-              color: "#999",
-            }}
-          />
+<header>
+  <div className="rigth">
+    <div className="cols">
+      <div className="col">
+        <div className="text_img act">
+          <i className="fa-solid fa-bars icon-persona" />
+          <a href="">تصنيفات المنتجات</a>
         </div>
-
-
-      <div className="image">       
-        <Link href="/"><img
-        src="/madmon-logo.webp"
-        alt="not found"
-      /></Link></div>
       </div>
-
-
-
-
-      <nav className="flex">
-        <div className="flex mnue">
-          <button className="icon-menu"></button>
-          <button >
-          تصنيفات المنتجات</button>
+      <div className="col">
+        <div className="text_img">
+          <img src="img/header_rigth_1.webp" alt="" />
+          <a href="">شاشات </a>
         </div>
-          <ul className="flex">
-          <li><a href="">عروض الافتتاح</a></li>
-          <li><Link href="/" className="home">الرئيسية</Link></li>
-          <li><a href="">المتجر</a></li>
-          <li><a href="">تسوق بالعلامة التجارية</a></li>
-          <li><Link href="/contact">تواصل معنا</Link></li>
-        </ul>
-      </nav>
-    </header>
+      </div>
+      <div className="col">
+        <div className="text_img">
+          <img src="img/header_rigth_2.webp" alt="" />
+          <a href="">الأجهزة المنزلية الكبيرة</a>
+        </div>
+      </div>
+      <div className="col">
+        <div className="text_img">
+          <img src="img/header_rigth_3.webp" alt="" />
+          <a href="">الأجهزة المنزلية الصغيرة</a>
+        </div>
+      </div>
+      <div className="col">
+        <div className="text_img">
+          <img src="img/header_rigth_4.webp" alt="" />
+          <a href="">أحواض</a>
+        </div>
+      </div>
+      <div className="col">
+        <div className="text_img">
+          <img src="img/header_rigth_5.webp" alt="" />
+          <a href="">أطقم بلت إن</a>
+        </div>
+      </div>
+      <div className="col">
+        <div className="text_img">
+          <img src="img/header_rigth_5.webp" alt="" />
+          <a href="">بلت إن</a>
+        </div>
+      </div>
+      <div className="col">
+        <div className="text_img">
+          <img src="img/header_rigth_7.jpg" alt="" />
+          <a href=""> العناية الشخصية</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {/* //////////////////////////////////// */}
+  <div className="navpar">
+    <div className="icon_logo">
+      <div className="pars">
+        <i id="nume" className="fa-solid fa-bars" />
+      </div>
+      <div className="logo">
+        <img src="img/logo.webp" alt="" />
+      </div>
+      <div className="search">
+        <form action="">
+          <input type="text" placeholder="Search" />
+          <i className="fa-solid fa-magnifying-glass" />
+        </form>
+      </div>
+      <div className="icon">
+        <div className="con">
+          <i className="fa-regular fa-user" />
+        </div>
+        <div className="con">
+          <i className="fa-regular fa-heart" />
+          <p className="none">1</p>
+        </div>
+        <div className="con">
+          <i
+            style={{
+              backgroundColor: "#f33419",
+              color: "#fff",
+              border: "none"
+            }}
+            className="fa-solid fa-cart-plus"
+          />
+          <p>0</p>
+        </div>
+      </div>
+    </div>
+    <div id="mex" className="nav">
+      <div className="icon">
+        <i className="fa-solid fa-bars" />
+        <a href="">تصنيفات المنتجات</a>
+      </div>
+      <div>
+        <nav>
+          <ul id="mex">
+            <li>
+              <a href=""> عروض الافتتاح</a>
+            </li>
+            <li>
+              <a href="">الرئيسية</a>
+            </li>
+            <li>
+              <a href="">المتجر</a>
+            </li>
+            <li>
+              <a href="">تسوق بالعلامة التجارية</a>
+            </li>
+            <li>
+              <a href="">تواصل معنا</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
   );
 };
 
