@@ -8,7 +8,7 @@ const Footer = () => {
       <div className=" flex beg-div" style={{ justifyContent: "space-evenly" }}>
         <div>
           <div className="image">
-            <img src="/madmon-logo.webp" alt="" width={250} />
+            <img src="/logo-greda.png" alt="" width={250} />
           </div>
           <p className="praj" style={{ width: "20rem" }}>
             نقدم مجموعة متنوعة من الأجهزة العالية الجودة التي تجعل منزلك أكثر
