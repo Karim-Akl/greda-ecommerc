@@ -132,6 +132,34 @@ const Footer = () => {
           <Link href={"/refund_returns"}>سياسة الاسترجاع</Link>
         </div>
       </div>
+
+
+      <>
+  {/* /* /////.bottom_icon start////// * / */}
+  <section className="bottom_icon">
+    <div className="icons">
+      <div className="col">
+        <i className="fa-solid fa-shop" />
+        <p>My account</p>
+      </div>
+      <div className="col">
+        <i className="fa-regular fa-heart" />
+        <p>Cart</p>
+      </div>
+      <div className="col">
+        <i className="fa-solid fa-cart-plus" />
+        <p>Wishlist</p>
+      </div>
+      <div className="col">
+        <i className="fa-regular fa-user" />
+        <p>Shop</p>
+      </div>
+    </div>
+  </section>
+  {/* /* /////.bottom_icon end////// * / */}
+</>
+
+      
     </footer>
   );
 };

@@ -1,0 +1,43 @@
+/* hero.css */
+
+.home_img .mySwiper {
+  width: 100%;
+  height: auto;
+}
+.home_img .img-slider-class {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.banner .mySwiper {
+  width: 100%;
+}
+.banner .img-slider-class {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* Responsive Design */
+@media (max-width: 320px) {
+  .sale_sec {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+  .sale_sec {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .sale_sec {
+    padding: 30px;
+  }
+}
+@media (min-width: 769px) {
+  .sale_sec {
+    padding: 40px;
+  }
+}
