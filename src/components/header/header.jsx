@@ -1,9 +1,11 @@
+"use client";
 import "./header.css";
 import "../../../public/style.css";
 import "../../app/globals.css";
-
+import { useState }  from 'react'
 import Link from "next/dist/client/link";
 const Header = () => {
+   const [active, setactivee] = useState(false)
   return (
     <div>
           <header>
@@ -11,7 +13,7 @@ const Header = () => {
               <div className="cols">
                 <div className="col">
                   <div className="text_img act">
-                    <i className="fa-solid fa-bars icon-paragraph-right" />
+                    <i className="fa-solid fa-bars icon-paragraph-right  icon-menu" />
                     <a href="##"
                     style={{marginRight:"30px"}}>
                       تصنيفات المنتجات
@@ -97,246 +99,218 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <div className="navpar">
-              <div className="icon_logo">
-                <div className="pars">
-                  <i
-                    className="fa-solid fa-bars icon-paragraph-right"
-                    id="nume"
-                  />
-                </div>
-                <div className="logo">
-                  <a href="/">
-                  <img 
-                    alt=""
-                    src="/logo-greda.png" width={100} height={100}
-                    style={{
-                      marginTop:"-30px"
-                    }}
-                  />
-                  </a>
 
-                </div>
-                <div className="search">
-                  <form action="">
-                    <input
-                      placeholder="Search"
-                      type="text"
-                    />
-                    <i className="fa-solid fa-magnifying-glass icon-search" />
-                  </form>
-                </div>
-                <div className="icon">
-                  <div className="con">
-                    {/* <i className="fa-regular fa-user icon-user" /> */}
-                  </div>
-                  <div className="con">
-                    <i className="fa-regular fa-heart icon-heart-o " />
-                    <p className="none">
-                      1
-                    </p>
-                  </div>
-                  <div className="con">
-                    <i
-                      className="fa-solid fa-cart-plus icon-cart"
-                      style={{
-                        backgroundColor: '#f33419',
-                        border: 'none',
-                        color: '#fff',
-                      }}
-                    />
-                    <p>
-                      0
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="nav"
-                id="mex"
-              >
-                <a className="icon">
-                  <i className="fa-solid fa-bars icon-paragraph-right icon-menu" />
-                  <a href="##" 
-                  >
-                    تصنيفات المنتجات
-                  </a>
-                </a>
-                <div>
-                  <nav>
+            
+            <div>
+  <div className="container top-nav">
+    <div className="menus">
+    <i onClick={()=>setactivee(!active)} className="fa-solid fa-bars icon-paragraph-right  icon-menu" />
+    </div>
+    <Link
+      className="logo"
+      href="/"
+    >
+      {' '}
+      <img
+        alt=""
+        src="img/logo_v.png"
+      />
+    </Link>
+    <form
+      action=""
+      className="search">
+      <input
+        placeholder="Search"
+        type="search"
+      />
+      <i className="  icon-search" />
+      </form>
+    <div className="cart_header">
+      <div className="icon_cart">
+      <i className="   icon-cart" />
+      <span className="count_item">
+          {' '}0
+        </span>
+      </div>
+    </div>
+  </div>
+  <nav>
+    <div className="links">
+      {/* <div className="loging">
+      <i className="fa-solid fa-bars icon-paragraph-right  icon-menu" />
+      <a href="">
+          تصنيفات المنتجات
+        </a>
+      </div> */}
+      <ul className={active ? 'active' : ''}>
+        {/* <li className="active">
+          <a href="">
+            عروض الافتتاح
+          </a>
+        </li> */}
+        <li>
+          <Link href="/">
+            الرئيسية
+          </Link>
+        </li>
+        <li>
+          <Link href="/product-category">
+            المتجر
+          </Link>
+        </li>
+        <li>
+          <a href="">
+            {' '}تسوق بالعلامة التجارية
+          </a>
+          <ul id="submenu">
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_1.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_2.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_3.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_4.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_5.webp"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_6.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_7.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_8.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_9.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_10.webp"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_11.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_12.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_13.webp"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_14.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_15.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  alt=""
+                  src="img/banner_16.png"
+                />
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <Link href="/contact">
+            تواصل معنا
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
-                    <ul id="mex">
-                      <li>
-                        <a href="##">
-                          {' '}عروض الافتتاح
-                        </a>
-                      </li>
-                      <li>
-                        <a href="##">
-                          الرئيسية
-                        </a>
-                      </li>
-                      <li>
-                        <a href="##">
-                          المتجر
-                        </a>
-                      </li>
-                      <li>
-                        <a href="##">
-                          تسوق بالعلامة التجارية
-                        </a>
-                        <ul id="submenu">
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_1.png"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_2.png"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_3.png"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_4.png"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_5.webp"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_6.png"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_7.png"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_8.png"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_9.png"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_10.webp"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_11.png"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_12.png"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_13.webp"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_14.png"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_15.png"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="##">
-                              <img
-                                alt=""
-                                src="img/banner_16.png"
-                              />
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <Link href="/contact">
-                          تواصل معنا
-                        </Link>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-            <script
-              dangerouslySetInnerHTML={{
-                __html: '          let btnMenu = document.getElementById(\'nume\');                let mex = document.getElementById(\'mex\');                        btnMenu.onclick = (event) => {                    event.stopPropagation(); // لمنع تفعيل الحدث في العناصر الأب                    btnMenu.classList.toggle(\'fa-times\');                    mex.classList.toggle(\'active\');                                    }                        document.onclick = () => {                    btnMenu.classList.remove(\'fa-times\');                    mex.classList.remove(\'active\');                }    '
-              }}
-             />
+            
+   
           </header>
 
           <section className="bottom_icon">
             <div className="icons">
               <div className="col">
-                <i className="fa-solid fa-shop icon-home icon-male" />
+                <i className="fa-solid fa-shop icon-home icon-shopping" />
                 <p>
                   Shop{' '}
                 </p>
@@ -348,13 +322,13 @@ const Header = () => {
                 </p>
               </div>
               <div className="col">
-                <i className="fa-solid fa-cart-plus icon-cart " />
+                <i className="icon-cart " />
                 <p>
                   Cart
                 </p>
               </div>
               <div className="col">
-                <i className="fa-regular fa-user icon-user" />
+                <i className=" icon-user " />
                 <p>
                   My account
                 </p>

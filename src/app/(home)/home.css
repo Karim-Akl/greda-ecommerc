@@ -1,0 +1,30 @@
+.scroll2Top{
+  border-radius: 50%;
+  background-color: #f05c07;
+  margin: auto;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 4rem;
+  bottom: 5rem;
+  z-index: 12020;
+  opacity: .8;
+}
+.icon-angle-double-up:hover{
+  background-color: #201F1D;
+  color: #f05c07;
+  border: white solid 2px !important;
+  opacity: 1;
+
+}
+@media (max-width: 868px){
+  .scroll2Top{
+
+    right: 2rem;
+    bottom: 5rem;
+    z-index: 12020;
+    opacity: .8;
+  }
+}
+

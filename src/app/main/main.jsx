@@ -2,6 +2,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Link from "next/dist/client/link";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -9,64 +10,64 @@ import "swiper/css/pagination";
 const products = [
   {
     id: 1,
-    image: "img/home_2.jpg",
-    hoverImage: "img/home_3.jpg",
+    image: "/img/prodect-1.jpeg",
+    hoverImage: "/img/prodect-5.jpeg",
     name: "طقم بيورتي + PIATTA 60 cm",
     oldPrice: "EGP 240",
     newPrice: "220 EGP",
   },
   {
     id: 1,
-    image: "img/home_2.jpg",
-    hoverImage: "img/home_3.jpg",
+    image: "/img/prodect-2.jpeg",
+    hoverImage: "/img/prodect-16.jpeg",
     name: "طقم بيورتي + PIATTA 60 cm",
     oldPrice: "EGP 240",
     newPrice: "220 EGP",
   },
   {
     id: 1,
-    image: "img/home_2.jpg",
-    hoverImage: "img/home_3.jpg",
+    image: "/img/prodect-3.jpeg",
+    hoverImage: "/img/prodect-16.jpeg",
     name: "طقم بيورتي + PIATTA 60 cm",
     oldPrice: "EGP 240",
     newPrice: "220 EGP",
   },
   {
     id: 1,
-    image: "img/home_2.jpg",
-    hoverImage: "img/home_3.jpg",
+    image: "/img/prodect-16.jpeg",
+    hoverImage: "/img/prodect-16.jpeg",
     name: "طقم بيورتي + PIATTA 60 cm",
     oldPrice: "EGP 240",
     newPrice: "220 EGP",
   },
   {
     id: 1,
-    image: "img/home_2.jpg",
-    hoverImage: "img/home_3.jpg",
+    image: "/img/prodect-5.jpeg",
+    hoverImage: "/img/prodect-16.jpeg",
     name: "طقم بيورتي + PIATTA 60 cm",
     oldPrice: "EGP 240",
     newPrice: "220 EGP",
   },
   {
     id: 1,
-    image: "img/home_2.jpg",
-    hoverImage: "img/home_3.jpg",
+    image: "/img/prodect-16.jpeg",
+    hoverImage: "/img/prodect-16.jpeg",
     name: "طقم بيورتي + PIATTA 60 cm",
     oldPrice: "EGP 240",
     newPrice: "220 EGP",
   },
   {
     id: 1,
-    image: "img/home_2.jpg",
-    hoverImage: "img/home_3.jpg",
+    image: "/img/prodect-16.jpeg",
+    hoverImage: "/img/prodect-16.jpeg",
     name: "طقم بيورتي + PIATTA 60 cm",
     oldPrice: "EGP 240",
     newPrice: "220 EGP",
   },
   {
     id: 1,
-    image: "img/home_2.jpg",
-    hoverImage: "img/home_3.jpg",
+    image: "/img/prodect-5.jpeg",
+    hoverImage: "/img/prodect-16.jpeg",
     name: "طقم بيورتي + PIATTA 60 cm",
     oldPrice: "EGP 240",
     newPrice: "220 EGP",
@@ -81,31 +82,32 @@ const Main = () => {
         <div className="container">
           <div className="sale_sec mySwiper">
             <div className="top_slide">
-              <h2>
+              {/* <h2>
                 احدث عروض اطقم البلت ان
-              </h2>
+              </h2> */}
             </div>
             <div className="products swiper-wrapper">
               <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
                 loop={true}
                 slidesPerView={1}
                 spaceBetween={10}
                 navigation={true}
+                // autoplay={{ delay: 3000, disableOnInteraction: false }}
                 breakpoints={{
                   640: {
                     slidesPerView: 2,
                     spaceBetween: 20,
                   },
-                  768: {
+                  908: {
                     slidesPerView: 3,
-                    spaceBetween: 40,
+                    spaceBetween: 100,
                   },
-                  1024: {
+                  1304: {
                     slidesPerView: 5,
                     spaceBetween: 20,
                   },
                 }}
-                modules={[Navigation]}
                 className="mySwiper"
               >
                 {products.map((product) => (
@@ -125,6 +127,7 @@ const Main = () => {
                       <span className="sale_present">
                         10%
                       </span>
+                      <Link href="/products">
                       <div className="img_product">
                         <img
                           alt=""
@@ -136,10 +139,11 @@ const Main = () => {
                           src={product.hoverImage}
                         />
                       </div>
+                      </Link>
                       <h3 className="name_product">
-                        <a href="##">
+                        <Link href="/products">
                           {product.name}
-                        </a>
+                        </Link>
                       </h3>
                       <div className="price">
                         <p className="old_price">

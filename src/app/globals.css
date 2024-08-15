@@ -736,7 +736,7 @@ header .navpar .icon_logo .icon .con p{
     border-radius: 20px;
   }
   
-  .home_img .container .cols .col .img_cols .imges .img{
+  .home_img .container .cols .col .img_cols .imges {
     background-image: url( https://madmonegypt.com/wp-content/uploads/2024/06/115.webp);
     background-size: cover;
     background-repeat: no-repeat;
@@ -751,8 +751,9 @@ header .navpar .icon_logo .icon .con p{
    transition: 0.3s ease-in-out;
    position: relative;
   }
-  .home_img .container .cols .col .img_cols .tow_col .imges .img{
+  .home_img .container .cols .col .img_cols .tow_col .imges {
 
+    background-image: url( https://madmonegypt.com/wp-content/uploads/2024/06/115.webp);
 
     background-size: cover;
     background-position: center;
@@ -778,6 +779,7 @@ header .navpar .icon_logo .icon .con p{
   
   .home_img .container .cols .col .img_cols .tow_col .imges{
   height: 200px;
+  
   }
   
   .home_img .container .cols .col .img_cols .imges .img .text{
@@ -1208,6 +1210,19 @@ font-size: 14px;
 
 .product .img_product{
 position: relative;
+object-fit:inherit;
+width: 100%;
+margin: auto;
+justify-content: center;
+align-items: center;
+height: 100px;
+}
+.product .img_product img{
+font-size: 100px !important;
+object-fit:inherit;
+width: 150% !important;
+height: inherit;
+padding-right: 80px;
 
 }
 
