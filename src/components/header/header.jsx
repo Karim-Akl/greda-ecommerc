@@ -107,9 +107,12 @@ const Header = () => {
                 </div>
                 <div className="logo">
                   <a href="/">
-                  <img
+                  <img 
                     alt=""
-                    src="img/logo.webp"
+                    src="/logo-greda.png" width={100} height={100}
+                    style={{
+                      marginTop:"-30px"
+                    }}
                   />
                   </a>
 
@@ -139,7 +142,7 @@ const Header = () => {
                       style={{
                         backgroundColor: '#f33419',
                         border: 'none',
-                        color: '#fff'
+                        color: '#fff',
                       }}
                     />
                     <p>

@@ -712,7 +712,9 @@ header .navpar .icon_logo{
 
 
 
- 
+    .con{
+      margin-top: -30px;
+    }
     /* /////////////////HEADER END//////// //// */
 
 
