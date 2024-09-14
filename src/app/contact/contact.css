@@ -13,6 +13,7 @@
   flex-direction: column;
   width: auto;
   text-align: center;
+  margin-top: 9rem;
 }
 section .img-rols {
   position: relative;
@@ -22,7 +23,6 @@ section .img-rols {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-block: 9rem;
 }
 section img {
   width: 100%;
@@ -32,7 +32,7 @@ section img {
 }
 section .text-rols {
   width: 50rem;
-  height: 400px;
+  height: 180px;
   position: absolute;
   color: white;
   justify-content: center;

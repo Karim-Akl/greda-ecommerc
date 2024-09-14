@@ -1,0 +1,104 @@
+{
+  "Products": [
+    {
+      "id": 1,
+      "image": "/img/prodect-1.jpeg",
+      "hoverImage": "/img/prodect-2.jpeg",
+      "name": "طقم بيورتي + PIATTA 60 cm",
+      "oldPrice": "EGP 240",
+      "newPrice": "220 EGP",
+      "title": "Sport Backpack",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet eos rem molestiae repellendus, ducimus distinctio      perspiciatis veniam, neque iure illo eligendi. Lorem ipsum dolor sit      amet, consectetur adipisicing elit Suscipit consectetur."
+    },
+    {
+      "id": 2,
+      "image": "/img/prodect-2.jpeg",
+      "hoverImage": "/img/prodect-2.jpeg",
+      "name": "طقم بيورتي + PIATTA 60 cm",
+      "oldPrice": "EGP 240",
+      "newPrice": "220 EGP",
+      "title": "Sport Backpack",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet eos rem molestiae repellendus, ducimus distinctio      perspiciatis veniam, neque iure illo eligendi. Lorem ipsum dolor sit      amet, consectetur adipisicing elit Suscipit consectetur."
+    },
+    {
+      "id": 3,
+      "image": "/img/prodect-3.jpeg",
+      "hoverImage": "/img/prodect-5.jpeg",
+      "name": "طقم بيورتي + PIATTA 60 cm",
+      "oldPrice": "EGP 240",
+      "newPrice": "220 EGP",
+      "title": "Sport Backpack",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet eos rem molestiae repellendus, ducimus distinctio      perspiciatis veniam, neque iure illo eligendi. Lorem ipsum dolor sit      amet, consectetur adipisicing elit Suscipit consectetur."
+    },
+    {
+      "id": 4,
+      "image": "/img/prodect-4.jpeg",
+      "hoverImage": "/img/prodect-5.jpeg",
+      "name": "طقم بيورتي + PIATTA 60 cm",
+      "oldPrice": "EGP 240",
+      "newPrice": "220 EGP",
+      "title": "Sport Backpack",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet eos rem molestiae repellendus, ducimus distinctio      perspiciatis veniam, neque iure illo eligendi. Lorem ipsum dolor sit      amet, consectetur adipisicing elit Suscipit consectetur."
+    },
+    {
+      "id": 5,
+      "image": "/img/prodect-5.jpeg",
+      "hoverImage": "/img/prodect-5.jpeg",
+      "name": "طقم بيورتي + PIATTA 60 cm",
+      "oldPrice": "EGP 240",
+      "newPrice": "220 EGP",
+      "title": "Sport Backpack",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet eos rem molestiae repellendus, ducimus distinctio      perspiciatis veniam, neque iure illo eligendi. Lorem ipsum dolor sit      amet, consectetur adipisicing elit Suscipit consectetur."
+    },
+    {
+      "id": 6,
+      "image": "/img/prodect-6.jpeg",
+      "hoverImage": "/img/prodect-5.jpeg",
+      "name": "طقم بيورتي + PIATTA 60 cm",
+      "oldPrice": "EGP 240",
+      "newPrice": "220 EGP",
+      "title": "Sport Backpack",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet eos rem molestiae repellendus, ducimus distinctio      perspiciatis veniam, neque iure illo eligendi. Lorem ipsum dolor sit      amet, consectetur adipisicing elit Suscipit consectetur."
+    },
+    {
+      "id": 7,
+      "image": "/img/prodect-7.jpeg",
+      "hoverImage": "/img/prodect-5.jpeg",
+      "name": "طقم بيورتي + PIATTA 60 cm",
+      "oldPrice": "EGP 240",
+      "newPrice": "220 EGP",
+      "title": "Sport Backpack",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet eos rem molestiae repellendus, ducimus distinctio      perspiciatis veniam, neque iure illo eligendi. Lorem ipsum dolor sit      amet, consectetur adipisicing elit Suscipit consectetur."
+    },
+    {
+      "id": 8,
+      "image": "/img/prodect-8.jpeg",
+      "hoverImage": "/img/prodect-5.jpeg",
+      "name": "طقم بيورتي + PIATTA 60 cm",
+      "oldPrice": "EGP 240",
+      "newPrice": "220 EGP",
+      "title": "Sport Backpack",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet eos rem molestiae repellendus, ducimus distinctio      perspiciatis veniam, neque iure illo eligendi. Lorem ipsum dolor sit      amet, consectetur adipisicing elit Suscipit consectetur."
+    },
+    {
+      "id": 9,
+      "image": "/img/prodect-9.jpeg",
+      "hoverImage": "/img/prodect-5.jpeg",
+      "name": "طقم بيورتي + PIATTA 60 cm",
+      "oldPrice": "EGP 240",
+      "newPrice": "220 EGP",
+      "title": "Sport Backpack",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet eos rem molestiae repellendus, ducimus distinctio      perspiciatis veniam, neque iure illo eligendi. Lorem ipsum dolor sit      amet, consectetur adipisicing elit Suscipit consectetur."
+    },
+    {
+      "id": 10,
+      "image": "/img/prodect-10.jpeg",
+      "hoverImage": "/img/prodect-5.jpeg",
+      "name": "طقم بيورتي + PIATTA 60 cm",
+      "oldPrice": "EGP 240",
+      "newPrice": "220 EGP",
+      "title": "Sport Backpack",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet eos rem molestiae repellendus, ducimus distinctio      perspiciatis veniam, neque iure illo eligendi. Lorem ipsum dolor sit      amet, consectetur adipisicing elit Suscipit consectetur."
+    }
+  ]
+}

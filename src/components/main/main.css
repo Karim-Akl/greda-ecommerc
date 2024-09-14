@@ -1,0 +1,14 @@
+.product-all-class{
+  background-color: red !important;
+  padding: 15px;
+  border-radius: 40px;
+  color: aliceblue;
+  margin-block: 20px;
+  text-align: left;
+}
+.slide_sale{
+direction: rtl !important;
+margin-block: 50px;
+text-align: right;
+
+}

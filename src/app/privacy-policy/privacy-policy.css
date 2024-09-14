@@ -6,6 +6,7 @@
   flex-direction: column;
   width: auto;
   text-align: center;
+  margin-top: 9rem;
 }
 section .img-rols {
   position: relative;
@@ -16,8 +17,7 @@ section img {
   height: 20rem;
 }
 section .text-rols {
-  width: 50rem;
-  height: 400px;
+  height: 180px;
   position: absolute;
   color: white;
   justify-content: center;
@@ -56,11 +56,17 @@ section .text-bg-rols .tx {
 
 @media (width < 768px) {
   section .bg h3{
-    font-size: xx-large;
+    font-size: large;
   }
   section .bg span{
-    font-size: smaller;
-
+    font-size: 10px;
   }
+  section .text-bg-rols {
 
+    width: 95%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 5rem;
+    margin: auto;
+  }
 }

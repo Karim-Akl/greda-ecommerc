@@ -1,0 +1,42 @@
+.product-all-class{
+  background-color: red !important;
+  padding: 15px;
+  border-radius: 40px;
+  color: aliceblue;
+  margin-block: 20px;
+  text-align: left;
+}
+.slide_sale{
+direction: rtl !important;
+margin-block: 50px;
+text-align: right;
+
+}
+.products{
+  flex-wrap: wrap !important;
+  gap: 2rem !important;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center !important;;
+  width: 100%;
+  display: flex;
+}
+.product{
+  width: 300px;
+}
+
+@media (width < 1000px){
+
+}
+
+@media (width < 768px){
+  .products{
+    display: flex;
+    width: 100%;
+  }
+  .product{
+    width: 100%;
+  }
+
+}

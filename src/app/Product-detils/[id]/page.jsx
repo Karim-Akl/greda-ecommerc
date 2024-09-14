@@ -1,10 +1,43 @@
-import React from "react";
-import Header from "../../components/header/header";
-import Footer from "../../components/footer/footer";
-import Main from "../main/main";
+'use client';
+import React, { useState, useEffect } from "react";
+import Header from "../../../components/header/header";
+import Footer from "../../../components/footer/footer";
+import Main from "../../../components/main/main";
+import productData from "../../../../public/data/db.json";
 import "./product.css";
 
-const Products = () => {
+async function getData(id) {
+  const product = productData.Products.find((item) => item.id === parseInt(id, 10));
+  if (!product) {
+    throw new Error('Product not found');
+  }
+  return product;
+}
+const Products = ({ params }) => {
+  const [obgdata, setObgData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchProduct() {
+      try {
+        const data = await getData(params.id);
+        setObgData(data);  // Set the actual product data, not data.Products
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchProduct();
+  }, [params.id]);
+  
+  if (loading || !obgdata) {
+    return (
+      <div className="loading">
+        <p>Loading...</p>
+      </div>
+    );
+  }
   return (
     <div className="fff">
       <Header />
@@ -20,7 +53,7 @@ const Products = () => {
           }}
         >
           <div className="img-product" style={{ background: "#FFFFFF" }}>
-            <img src="/img/prodect-16.jpeg" alt="not found" style={{padding:"20px"}}/>
+            <img src={obgdata.image} alt="Product" style={{ padding: "20px" }} />
           </div>
 
           <div
@@ -36,26 +69,16 @@ const Products = () => {
               padding: "20px",
             }}
           >
-            <h4>
-              أوشن ديب فريزر أفقي 490 لتر دي فروست يعمل بكفاءة النوفروست سيلف NJ
-              65 TLLS A+ WFS
-            </h4>
+            <h4>{obgdata.title}</h4>
 
             <div
               className="flex cost"
               style={{ display: "flex", gap: "2rem", textAlign: "center" }}
             >
-              <span>39.129 EGP </span>
-              <span>35.999 EGP</span>
+              <span>{obgdata.newPrice}</span>
+              <span>{obgdata.oldPrice}</span>
             </div>
-
-            <p>- فريزر 524 لتر</p>
-            <p>- صافى الحجم 490 لتر</p>
-            <p>- بمفتاح لوك</p>
-            <p>- لون سيلفر</p>
-            <p>- يعمل بتكنولوجيا WFS ( يعمل بكفاءة النوفروست)</p>
-            <p>- جوان مضاد للبكتيريا</p>
-            <p>- الابعاد 176*71*88 سم</p>
+            <p>{obgdata.description}</p>
 
             <div style={{ display: "flex", gap: "2rem", textAlign: "center" }}>
               <button
@@ -68,7 +91,7 @@ const Products = () => {
                   color: "#fff",
                 }}
               >
-                اضافه الي السله{" "}
+                اضافه الي السله
               </button>
               <button
                 style={{
@@ -80,7 +103,9 @@ const Products = () => {
                   color: "#fff",
                 }}
               >
-                الطلب عبر الواتساب
+                <a href={`https://api.whatsapp.com/send?phone=+123455678910&text=Hi, I'm contacting you through Greda.ae I'd like to inquire about a car listed on your website`}>
+                  الطلب عبر الواتساب
+                </a>
               </button>
             </div>
           </div>
@@ -90,7 +115,6 @@ const Products = () => {
             <h4>معلومات إضافية</h4>
           </div>
           <hr />
-
           <div className="span-gap">
             <span>علامة تجارية</span>
             <span>اوشن</span>
@@ -101,7 +125,6 @@ const Products = () => {
             <span>فضى</span>
           </div>
           <hr />
-
           <div className="span-gap">
             <span>نوع الفريزر</span>
             <span>فريزر افقي</span>
@@ -109,9 +132,10 @@ const Products = () => {
           <hr />
         </div>
       </section>
-      <Main/>
+      <Main />
       <Footer />
     </div>
   );
 };
+
 export default Products;

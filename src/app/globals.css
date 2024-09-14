@@ -593,9 +593,6 @@ header .navpar .icon_logo .icon .con p{
     }
 
 
-    header .rigth{
-      display: none;
-    }
     header .navpar{
       width: 100%;
     }
@@ -642,9 +639,9 @@ header .navpar .icon_logo .icon .con p{
           width: 60%;
           
            }
-           header .nav.active{
+           /* header .nav.active{
              right: 0;
-           }
+           } */
 
         
      

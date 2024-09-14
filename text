@@ -84,16 +84,16 @@ const Header = () => {
               {" "}
               <img alt="" src="img/logo_v.png" />
             </Link>
-            {/* <form className="search" onSubmit={handleSearch}>
+            <form className="search" onSubmit={handleSearch}>
             <input name="search" placeholder="Search" type="search" />
             <button className="icon-search" type="submit"/>
-            </form> */}
-            {/* <div className="cart_header">
+            </form>
+            <div className="cart_header">
               <div className="icon_cart">
                 <i className="   icon-cart" />
                 <span className="count_item">0</span>
               </div>
-            </div> */}
+            </div>
           </div>
 
           <nav className="nav-right-class">
@@ -105,7 +105,7 @@ const Header = () => {
                 <li>
                   <Link href="/product-all">المتجر</Link>
                 </li>
-                {/* <li>
+                <li>
                   <a href=""> تسوق بالعلامة التجارية</a>
                   <ul id="submenu">
                     <li>
@@ -189,7 +189,7 @@ const Header = () => {
                       </a>
                     </li>
                   </ul>
-                </li> */}
+                </li>
                 <li>
                   <Link href="/contact">تواصل معنا</Link>
                 </li>
@@ -199,7 +199,7 @@ const Header = () => {
         </div>
       </header>
 
-      {/* <section className="bottom_icon">
+      <section className="bottom_icon">
         <div className="icons">
           <div className="col">
             <i className="fa-solid fa-shop icon-home icon-shopping" />
@@ -218,7 +218,7 @@ const Header = () => {
             <p>My account</p>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 };

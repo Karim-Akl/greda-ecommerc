@@ -1,99 +1,40 @@
 "use client";
 import React from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Link from "next/dist/client/link";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-const products = [
-  {
-    id: 1,
-    image: "/img/prodect-1.jpeg",
-    hoverImage: "/img/prodect-5.jpeg",
-    name: "طقم بيورتي + PIATTA 60 cm",
-    oldPrice: "EGP 240",
-    newPrice: "220 EGP",
-  },
-  {
-    id: 1,
-    image: "/img/prodect-2.jpeg",
-    hoverImage: "/img/prodect-16.jpeg",
-    name: "طقم بيورتي + PIATTA 60 cm",
-    oldPrice: "EGP 240",
-    newPrice: "220 EGP",
-  },
-  {
-    id: 1,
-    image: "/img/prodect-3.jpeg",
-    hoverImage: "/img/prodect-16.jpeg",
-    name: "طقم بيورتي + PIATTA 60 cm",
-    oldPrice: "EGP 240",
-    newPrice: "220 EGP",
-  },
-  {
-    id: 1,
-    image: "/img/prodect-16.jpeg",
-    hoverImage: "/img/prodect-16.jpeg",
-    name: "طقم بيورتي + PIATTA 60 cm",
-    oldPrice: "EGP 240",
-    newPrice: "220 EGP",
-  },
-  {
-    id: 1,
-    image: "/img/prodect-5.jpeg",
-    hoverImage: "/img/prodect-16.jpeg",
-    name: "طقم بيورتي + PIATTA 60 cm",
-    oldPrice: "EGP 240",
-    newPrice: "220 EGP",
-  },
-  {
-    id: 1,
-    image: "/img/prodect-16.jpeg",
-    hoverImage: "/img/prodect-16.jpeg",
-    name: "طقم بيورتي + PIATTA 60 cm",
-    oldPrice: "EGP 240",
-    newPrice: "220 EGP",
-  },
-  {
-    id: 1,
-    image: "/img/prodect-16.jpeg",
-    hoverImage: "/img/prodect-16.jpeg",
-    name: "طقم بيورتي + PIATTA 60 cm",
-    oldPrice: "EGP 240",
-    newPrice: "220 EGP",
-  },
-  {
-    id: 1,
-    image: "/img/prodect-5.jpeg",
-    hoverImage: "/img/prodect-16.jpeg",
-    name: "طقم بيورتي + PIATTA 60 cm",
-    oldPrice: "EGP 240",
-    newPrice: "220 EGP",
-  },
-  // يمكنك إضافة المزيد من المنتجات هنا بنفس الشكل
-];
-
+import "./main.css"
 const Main = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch("/data/db.json") // Fetch from public folder
+      .then((response) => response.json())
+      .then((data) => setProducts(data.Products)) // Access Products key inside data
+      .catch((error) => console.error("Error fetching products:", error));
+  }, []);
   return (
     <div>
       <div className="slide slide_sale">
         <div className="container">
           <div className="sale_sec mySwiper">
             <div className="top_slide">
-              {/* <h2>
+              <h2>
                 احدث عروض اطقم البلت ان
-              </h2> */}
+              </h2>
+              <Link href="/product-all" className="product-all-class"> عرض كل المنتجات  </Link>
             </div>
             <div className="products swiper-wrapper">
               <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+                modules={[Navigation, Pagination, Autoplay]}
                 loop={true}
                 slidesPerView={1}
                 spaceBetween={10}
                 navigation={true}
-                // autoplay={{ delay: 3000, disableOnInteraction: false }}
+                autoplay={{ delay: 3000, disableOnInteraction: true }}
                 breakpoints={{
                   640: {
                     slidesPerView: 2,
@@ -120,47 +61,31 @@ const Main = () => {
                         <span>
                           <i className="fa-solid fa-magnifying-glass icon-search" />
                         </span>
-                        <span>
-                          <i className="fa-regular fa-heart icon-heart icon-cart" />
-                        </span>
                       </div>
-                      <span className="sale_present">
-                        10%
-                      </span>
-                      <Link href="/products">
-                      <div className="img_product">
-                        <img
-                          alt=""
-                          src={product.image}
-                        />
-                        <img
-                          alt=""
-                          className="img_hover"
-                          src={product.hoverImage}
-                        />
-                      </div>
+                      <span className="sale_present">10%</span>
+                      <Link href={`/Product-detils/${product.id}`}>
+                        <div className="img_product">
+                          <img alt="" src={product.image} />
+                          <img
+                            alt=""
+                            className="img_hover"
+                            src={product.hoverImage}
+                          />
+                        </div>
                       </Link>
                       <h3 className="name_product">
-                        <Link href="/products">
-                          {product.name}
-                        </Link>
+                        <Link href={`/Product-detils/${product.id}`}>{product.name}</Link>
                       </h3>
                       <div className="price">
-                        <p className="old_price">
-                          {product.oldPrice}
-                        </p>
+                        <p className="old_price">{product.oldPrice}</p>
                         <p>
-                          <span>
-                            {product.newPrice}
-                          </span>
+                          <span>{product.newPrice}</span>
                         </p>
                       </div>
                       <div className="card">
                         <div className="button">
                           <div className="button-wrapper">
-                            <div className="text">
-                              إضافة إلى السلة
-                            </div>
+                            <div className="text">إضافة إلى السلة</div>
                             <span className="icon">
                               <svg
                                 className="bi bi-cart2"
@@ -178,7 +103,7 @@ const Main = () => {
                       </div>
                       <div className="whats">
                         <button>
-                          الطلب عبر واتساب{' '}
+                          الطلب عبر واتساب{" "}
                           <i className="fa-brands fa-whatsapp icon-whatsapp" />
                         </button>
                       </div>
