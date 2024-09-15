@@ -719,6 +719,8 @@ position: relative;
 .product .img_product img{
 width: 100%;
 transition: 0.3s ease-in-out;
+padding-right:0px !important
+
 }
 .product .img_product .img_hover{
 position: absolute;
@@ -727,17 +729,13 @@ left: 0;
 width: 100%;
 opacity: 0;
 scale: 0.1;
-height: 100%;
+height: 200px;
 display: none;
 }
 .product:hover .img_product img{
 opacity: 0;
 }
-.product:hover .img_product .img_hover{
-opacity: 1;
-scale: 1;
 
-}
 
 .product .name_product{
 font-size: 20px;
@@ -786,6 +784,7 @@ background-color: #ffffff;
 box-shadow: 5px 5px 10px rgb(64, 64, 64);
 border-radius: 10px;
 padding: 5px 12px;
+width: 40px !important;
 }
 
 .product .icons span i{
@@ -948,7 +947,14 @@ right: calc(100% - 28px);
 
 
 
+.product:hover .img_product .img_hover{
+  opacity: 1;
+  scale: 1;
+  height: 200px;
+  width: 100% !important;
+  object-fit: cover;
 
+}
 
 
 @media  (max-width:1100px){

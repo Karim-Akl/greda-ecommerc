@@ -2,12 +2,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Pagination, Autoplay, Thumbs } from "swiper/modules";
 import Link from "next/dist/client/link";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "./main.css"
+import "swiper/css/thumbs";
+import "./main.css";
 const Main = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -21,21 +22,17 @@ const Main = () => {
       <div className="slide slide_sale">
         <div className="container">
           <div className="sale_sec mySwiper">
-            <div className="top_slide">
-              <h2>
-                احدث عروض اطقم البلت ان
-              </h2>
-              <Link href="/product-all" className="product-all-class"> عرض كل المنتجات  </Link>
-            </div>
             <div className="products swiper-wrapper">
               <Swiper
-                modules={[Navigation, Pagination, Autoplay]}
+                modules={[Navigation, Pagination, Autoplay, Thumbs]}
+                navigation
                 loop={true}
                 slidesPerView={1}
-                spaceBetween={10}
-                navigation={true}
-                autoplay={{ delay: 3000, disableOnInteraction: true }}
-                breakpoints={{
+                // pagination={{ clickable: true }}
+                autoplay={{ delay: 3000 }}
+              
+                breakpoints=
+                {{
                   640: {
                     slidesPerView: 2,
                     spaceBetween: 20,
@@ -49,8 +46,7 @@ const Main = () => {
                     spaceBetween: 20,
                   },
                 }}
-                className="mySwiper"
-              >
+                className="mySwiper" >
                 {products.map((product) => (
                   <SwiperSlide key={product.id}>
                     <div className="product swiper-slide">
@@ -74,7 +70,9 @@ const Main = () => {
                         </div>
                       </Link>
                       <h3 className="name_product">
-                        <Link href={`/Product-detils/${product.id}`}>{product.name}</Link>
+                        <Link href={`/Product-detils/${product.id}`}>
+                          {product.name}
+                        </Link>
                       </h3>
                       <div className="price">
                         <p className="old_price">{product.oldPrice}</p>

@@ -30,43 +30,43 @@ const Header = () => {
             <div className="col">
               <div className="text_img">
                 <img alt="" src="img/header_rigth_1.webp" />
-                <a href="##">شاشات </a>
+                <a href="/product-all">شاشات </a>
               </div>
             </div>
             <div className="col">
               <div className="text_img">
                 <img alt="" src="img/header_rigth_2.webp" />
-                <a href="##">الأجهزة المنزلية الكبيرة</a>
+                <a href="/product-all">الأجهزة المنزلية الكبيرة</a>
               </div>
             </div>
             <div className="col">
               <div className="text_img">
                 <img alt="" src="img/header_rigth_3.webp" />
-                <a href="##">الأجهزة المنزلية الصغيرة</a>
+                <a href="/product-all">الأجهزة المنزلية الصغيرة</a>
               </div>
             </div>
             <div className="col">
               <div className="text_img">
                 <img alt="" src="img/header_rigth_4.webp" />
-                <a href="##">أحواض</a>
+                <a href="/product-all">أحواض</a>
               </div>
             </div>
             <div className="col">
               <div className="text_img">
                 <img alt="" src="img/header_rigth_5.webp" />
-                <a href="##">أطقم بلت إن</a>
+                <a href="/product-all">أطقم بلت إن</a>
               </div>
             </div>
             <div className="col">
               <div className="text_img">
                 <img alt="" src="img/header_rigth_5.webp" />
-                <a href="##">بلت إن</a>
+                <a href="/product-all">بلت إن</a>
               </div>
             </div>
             <div className="col">
               <div className="text_img">
                 <img alt="" src="img/header_rigth_7.jpg" />
-                <a href="##"> العناية الشخصية</a>
+                <a href="/product-all"> العناية الشخصية</a>
               </div>
             </div>
           </div>

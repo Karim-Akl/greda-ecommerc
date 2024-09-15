@@ -5,6 +5,7 @@ import Header from "@/components/header/header";
 import Hero from "../../components/hero/hero";
 import Main from "../../components/main/main";
 import NotFound from "../not-found";
+import Link from "next/link";
 import "./home.css"
 const Page = () => {
   const [state, setState] = useState(false);
@@ -29,6 +30,13 @@ const Page = () => {
     <div>
       <Header />
       <Hero />
+      <div className="top_slide">
+              <h2>
+                احدث عروض اطقم البلت ان
+              </h2>
+              <Link href="/product-all" className="product-all-class"> عرض كل المنتجات  </Link>
+            </div>
+      <Main />
       <Main />
       <Footer />
       

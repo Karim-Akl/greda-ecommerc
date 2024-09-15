@@ -6,7 +6,7 @@
   flex-direction: column;
   width: auto;
   text-align: center;
-  margin-top: 9rem;
+  margin-top: 8rem !important;
 }
 section .img-rols {
   position: relative;

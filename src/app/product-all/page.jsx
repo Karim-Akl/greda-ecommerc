@@ -56,9 +56,6 @@ const ProductAll = () => {
                         <span>
                           <i className="fa-solid fa-magnifying-glass icon-search" />
                         </span>
-                        <span>
-                          <i className="fa-regular fa-heart icon-heart icon-cart" />
-                        </span>
                       </div>
                       <span className="sale_present">10%</span>
                       <Link href={`/Product-detils/${product.id}`}>

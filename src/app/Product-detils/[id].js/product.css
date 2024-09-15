@@ -29,8 +29,12 @@ section .cost span:last-child {
 
 .top-prodect img {
   width: 100% !important;
-  height: auto;
+  height: 400px;
   background-color: #ffffff !important;
+  object-fit: contain !important;
+  object-position: center;
+  margin: auto;
+
 }
 .top-prodect {
   flex-direction: row;
@@ -72,7 +76,7 @@ section {
   }
   .top-prodect img {
     width: 100% !important;
-    height: auto;
+    height: 400px;
   }
   .top-prodect .img-product {
     margin: auto;

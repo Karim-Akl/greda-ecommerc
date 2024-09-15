@@ -1219,7 +1219,7 @@ font-size: 100px !important;
 object-fit:inherit;
 width: 150% !important;
 height: inherit;
-padding-right: 80px;
+  height: 200px;
 
 }
 
@@ -1240,8 +1240,11 @@ height: 100%;
 opacity: 0;
 }
 .product:hover .img_product .img_hover{
-opacity: 1;
-scale: 1;
+  opacity: 1;
+  scale: 1;
+  height: 200px;
+  width: 100% !important;
+  object-fit: cover;
 
 }
 
@@ -1291,6 +1294,7 @@ transition: 0.3s ease-in-out;
 background-color: #ffffff;
 box-shadow: 5px 5px 10px rgb(64, 64, 64);
 border-radius: 10px;
+width: 40px !important;
 }
 
 .product .icons span i{
